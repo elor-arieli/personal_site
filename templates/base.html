@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Arieli-Avital household</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "CSS_files/base.css" %}">
+    <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+
+      <!-- Inside of a Container -->
+    <div class="container-fluid">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <!-- This is the actual code that create the "hamburger icon" -->
+      <!-- The data-target grabs ids to put into the icon -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+          <!--  Code for the hamburger icon-->
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+      </div>
+
+      <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+          <li class="dropdown">
+            <a href="{% url 'Elor:about' %}" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Elor<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'Elor:about' %}">About</a></li>
+              <li><a href="{% url 'Elor:CV' %}">Curriculum Vitae</a></li>
+              <li><a href="{% url 'Elor:public_appearence' %}">Public Appearences</a></li>
+              <li><a href="{% url 'Elor:writing' %}">Writing</a></li>
+              <li><a href="{% url 'Elor:photography' %}">Photography</a></li>
+
+            </ul>
+          </li>
+
+            <li class="dropdown">
+            <a href="{% url 'Lynn:about' %}" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Lynn <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'Lynn:about' %}">About</a></li>
+              <li><a href="{% url 'Lynn:CV' %}">Curriculum Vitae</a></li>
+              <li><a href="{% url 'Lynn:art' %}">Art</a></li>
+              <li><a href="{% url 'Lynn:photography' %}">Photography</a></li>
+              <li><a href="{% url 'Lynn:MD' %}">M.D.</a></li>
+              <li><a href="{% url 'Lynn:music' %}">Music</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Rats <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="http://www.google.com">Go to Google</a></li>
+              <li><a href="#">Something else here</a></li>
+
+              <!-- Use this to separate a new link -->
+
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'travel' %}">Travel</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+    {% block body_block %}
+    {% endblock %}
+</body>
+</html>

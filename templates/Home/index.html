@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+<link rel="stylesheet" href="{% static "CSS_files/index_style.css" %}">
+<div class="container">
+    <div class="jumbotron">
+        <h1 align="center">Welcome to the Arieli-Avital household site</h1>
+        <h2>A little about us:</h2>
+        <h3>Elor:</h3>
+        <p>some stuff</p>
+        <h3>Lynn:</h3>
+        <p>some stuff</p>
+        <h3>Our Rats:</h3>
+        <ol>
+            <li style="float: left">Sleeping together:</li>
+                <p style="float: left;">
+                <img HEIGHT="240" width="320" src="{% static "rats/all/main.jpg" %}" style="float: right;" />
+                This is our wonderful group all cuddled up together to enjoy the warmth and comfort during the night
+                </p>
+            <li style="float: left">Luna:</li>
+                <p style="float: left;">
+                <img HEIGHT="240" width="320" src="{% static "rats/luna/main.jpg" %}" style="float: right;" />
+                Luna is one of our original duo. she is pure white curly fur and is the cutest of them all! she has a very easy going nature! she is also very cuddly and motherly. we love her!
+                </p>
+
+            <li style="float: left">Pandi:</li>
+                <p style="float: left;">
+                <img HEIGHT="240" width="320" src="{% static "rats/pandi/main.jpg" %}" style="float: right;" />
+                Pandi is half black and half white, also one of the 2 originals, she is very smart! has a bit of a tilt problem. loves to play and climb up to our shoulders
+                </p>
+
+            <li style="float: left">Suzi:</li>
+                <p style="float: left;">
+                <img HEIGHT="240" width="320" src="{% static "rats/suzi/main.jpg" %}" style="float: right;" />
+                Suzi is half white half light brown. she is very active but also a little scared. she loves to play with her sister Nikki.
+                </p>
+
+            <li style="float: left">Nikki:</li>
+                <p style="float: left;">
+                <img HEIGHT="240" width="320" src="{% static "rats/nikki/main.jpg" %}" style="float: right;" />
+                Nikki is half white and half black like pandi, she is maybe the most active and smartest of them all, she has learned how to open and close doors.
+                </p>
+
+            <li style="float: left">Pikachu:</li>
+                <p style="float: left;">
+                <img HEIGHT="240" width="320" src="{% static "rats/pikachu/main.jpg" %}" style="float: right;" />
+                Pikachu is a bit like courage the cowardly dog, he wants to go on adventures but everything scares him. he doesn't really like cuddling but my god look at those ears!
+                </p>
+
+            <li style="float: left">Munch (R.I.P):</li>
+                <p style="float: left;">
+                <img HEIGHT="320" width="240" src="{% static "rats/munch/main.jpg" %}" style="float: right;" />
+                Munch was pikachu's brother and had a very similiar character. sadly he died due to an illness.
+                </p>
+        </ol>
+    </div>
+</div>
+{% endblock %}
+</html>

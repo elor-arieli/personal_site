@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="page-header">
+        <h1>Lynn: music</h1>
+        </div>
+        <h3>Symphony by Clean bandit</h3>
+        <p>this is one of my favorite songs.</p>
+        <p><a href="https://www.youtube.com/watch?v=aatr_2MstrI">youtube link</a></p>
+        <P>enjoy:
+        <audio controls>
+          <source src="{% static "Lynn/music/Symphony.mp3" %}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        </P>
+    </div>
+</div>
+{% endblock %}
+</html>

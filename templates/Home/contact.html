@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+<style>
+  #map {
+    height: 400px;
+    width: 100%;
+   }
+</style>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Contact us</h1>
+        <p></p>
+        <h3>Elor:</h3>
+        <ul>
+            <li>Email: <a href="mailto:elor.arieli@gmail.com">elor.arieli@gmail.com</a></li>
+            <li>Facebook: <a href="https://www.facebook.com/elor.arieli">elor.arieli</a></li>
+        </ul>
+        <p></p>
+        <h3>Lynn:</h3>
+        <ul>
+            <li>Email: <a href="mailto:lynnavital@gmail.com">lynnavital@gmail.com</a></li>
+            <li>Facebook: <a href="https://www.facebook.com/lynn.avital.5">lynn.avital.5</a></li>
+            <li>Instagram: <a href="https://instagurum.com/u/lynnoosh">@lynnoosh</a></li>
+        </ul>
+        <p></p>
+        <p></p>
+        <h3>Where to find us:</h3>
+        <p>After working hours ;)</p>
+        <div id="map"></div>
+        <script>
+          function initMap() {
+            var uluru = {lat: 32.070283, lng: 34.777434};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 13,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3Tv8YFBOzUBQ4tMp_n0qEHG82RFw1Zgg&callback=initMap">
+        </script>
+        </div>
+</div>
+{% endblock %}
+</html>
